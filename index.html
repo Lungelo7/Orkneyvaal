@@ -26,25 +26,14 @@
     <link href="css/style.css" rel="stylesheet">
     
     <!-- recaptcha -->
-    <script src='https://www.google.com/recaptcha/api.js'></script>
+     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script>
+   function onSubmit(token) {
+     document.getElementById("demo-form").submit();
+   }
+ </script>
 
-function get_action(form) 
-{
-    var v = grecaptcha.getResponse();
-    if(v.length == 0)
-    {
-        document.getElementById('captcha').innerHTML="You can't leave Captcha Code empty";
-        return false;
-    }
-    else
-    {
-         document.getElementById('captcha').innerHTML="Captcha completed";
-        return true; 
-    }
-}
-
-</script>
+ 
     
 </head>
 
@@ -528,11 +517,12 @@ We provide a wide range of services online since we recognize that not everyone 
                                         <option value="3">destination 1</option>
                                     </select> -->
                                 
-                                    <div class="g-recaptcha" id="rcaptcha"data-sitekey="6LeRkDIqAAAAADzi_wlnLXijnCDEWVBYWnySw5v-"></div>
-<span id="captcha" style="color:red" /> <!-- this will show captcha errors -->
-                                
-                                    <button class="btn btn-primary btn-block py-3" type="submit">Sign Up Now</button>
-                                </div>
+                                    <button class="g-recaptcha" 
+                                            data-sitekey="6LeRkDIqAAAAADzi_wlnLXijnCDEWVBYWnySw5v-" 
+                                            data-callback='onSubmit' 
+                                            data-action='submit'
+                                            class="btn btn-primary btn-block py-3" type="submit">Sign Up Now</button>
+                               </div>
                             </form>
                         </div>
                     </div>
