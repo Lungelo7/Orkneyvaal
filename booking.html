@@ -146,10 +146,11 @@
                             <div class="col-md-3">
                                 <div class="mb-3 mb-md-0">
                                     <select class="custom-select px-4" style="height: 47px;">
-                                        <option selected>Duration</option>
-                                        <option value="1">3 day package</option>
-                                        <option value="2">5 day package</option>
-                                        <option value="3">Weekly package</option>
+                                        <option selected>Individuals</option>
+                                        <option value="1">1 person</option>
+                                        <option value="2">2 people</option>
+                                        <option value="3">3 - 6 people</option>
+                                        <option value="3">6 or more</option>
                                     </select>
                                 </div>
                             </div>
@@ -158,10 +159,26 @@
                     <div class="col-md-2">
                         <button class="btn btn-primary btn-block" type="submit" style="height: 47px; margin-top: -2px;">Submit</button>
                     </div>
+                    
+                    <!-- text area -->
+                    <label for="name"><pre> 
+                    If there are any extra requirements, please state on the box below. </pre>
+                    </label>
+                    <div class="col-md-12">
+                        <div class="mb-6 mb-md-4">
+                                <textarea class="form-control py-3 px-4" rows="5" id="message" placeholder="Message"
+                                    required="required"
+                                    data-validation-required-message="Please enter your message" name="message"></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+
+                    
+                    
                 </div>
             </div>
         </div>
     </div>
+    
    
     <!-- Booking End -->
 
@@ -178,8 +195,7 @@
                     <div class="contact-form bg-white" style="padding: 30px;">
                         <div id="success"></div>
                         <form 
-                         action="https://formspree.io/f/myyqzlro"
-                        method="POST">
+                         target="_blank" action="https://formsubmit.co/orkneyresort@gmail.com" method="POST">
                             <div class="form-row">
                                 <div class="control-group col-sm-6">
                                     <input type="text" class="form-control p-4" id="name" placeholder="Your Name"
