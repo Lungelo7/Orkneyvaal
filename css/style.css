@@ -9751,6 +9751,29 @@ h6,
   background: #7AB730;
 }
 
+.blink {
+  animation: blink 10s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    transform: scale(2);
+  }
+  51% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
 .blog-date::after {
   position: absolute;
   content: "";
@@ -9790,23 +9813,6 @@ function get_action(form)
 
 </script>
 
-/* blink */
-
-.blink {
-  animation: blink 1s steps(1, end) infinite;
-}
-
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 
 
 
